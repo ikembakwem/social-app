@@ -1,0 +1,11 @@
+venv
+*db.sqlite3
+settings.py
+*__pycache__
+.idea/
+*.pyc
+settings
+*.env
+node_modules
+app.js
+chunk-vendors.js
