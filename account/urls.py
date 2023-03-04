@@ -12,6 +12,7 @@ urlpatterns = [
   path('dashboard/', views.dashboard, name='dashboard'),
   path('', include('django.contrib.auth.urls')),
   path('register/', views.register, name='register'),
+  path('edit/', views.edit, name='edit'),
 #   Changing password urls
 #   path('password_change/',
 #        auth_views.PasswordChangeView.as_view(),
