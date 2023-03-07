@@ -7,3 +7,5 @@ venv
 node_modules
 app.js
 chunk-vendors.js
+*.crt
+*.key
