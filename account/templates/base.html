@@ -33,6 +33,7 @@
         {% else %}
         <a href="{% url 'login' %}">Login</a>
         <a href="{% url 'register' %}">Sign Up</a>
+        <a href="{% url 'socials:begin' 'facebook' %}">Signin with Facebook</a>
         {% endif %}
       </span>
     </div>

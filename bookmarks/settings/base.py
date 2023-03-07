@@ -17,7 +17,7 @@ import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Configuring environment variables using the django environ library 
+# Configuring environment variables using the django environ library
 env = environ.Env()
 environ.Env.read_env() # Read the .env file
 
@@ -126,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 
 # Configuring login url and redirect url
@@ -152,4 +152,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 AUTHENTICATION_BACKENDS = [
   'django.contrib.auth.backends.ModelBackend',
   'account.authentication.EmailAuthBackend',
+  'social_core.backends.facebook.FacebookOAuth2',
 ]
+
+
+# Configuring Facebook social authentication
+SOCIAL_AUTH_FACEBOOK_KEY = env('FB_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = env('FB_SECRET')
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
